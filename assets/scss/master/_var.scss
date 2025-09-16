@@ -1,0 +1,45 @@
+
+$color-primary : var(--color-primary);
+$color-secoundary : var(--color-secoundary);
+
+$white : var(--white) ;
+$bg : var(--bg) ;
+$darck: var(--darck) ;
+$grey-darck : var(--grey-darck);
+$light: var(--light) ;
+$grey : var(--grey);
+$danger: var(--danger) ;
+$succsess: var(--succsess) ;
+$worning: var(--worning) ;
+
+$border-primary : var(--border-primary) ;
+$border-secoundary:var(--border-secoundary) ;
+
+$text-darck : var(--text-darck);
+$text-grey : var(--text-gray);
+$text-light : #f1f5f7 ;
+
+$m-primary : 25px ;
+$m-secoundary : 15px ;
+$m-container : 80px ;
+$p-primary : 15px ;
+$p-secoundary : 10px ;
+
+$size-primary : 17px ;
+$size-section : calc($size-primary + 8px) ;
+$size-secoundary : calc($size-primary - 1px) ;
+$size-smaller-primary : calc($size-primary - 3px) ;
+
+
+$radius-primary : 7px ;
+$radius-secoundary : 25px ;
+$radius-x : 50% ;
+
+$shadow-primary : 0 0 8px 1px #ccd4d6d5 ;
+
+$fw-p : 600 ;
+$fw-700: 700 ;
+
+$box : 40px ;
+$box-p : 45px ;
+$nav-w : 350px ;

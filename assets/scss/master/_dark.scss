@@ -1,0 +1,25 @@
+
+@mixin theme($theme) {
+
+    @if $theme == 'dark' {
+        --color-primary : #13b5dd ;
+        --color-secoundary : #fde405 ;
+    
+        --white     : #222253 ;
+        --bg        : var(--white) ; 
+        --light     : #7979a3 ;
+        --grey      : #e2dede ;
+        --darck     : #030513 ;
+        --grey-darck: #26283a ;
+    
+        --border-primary   : #757599 ; 
+        --border-secoundary: ;
+    
+        --text-darck : #e1e2ec;
+        --text-gray  : #aeb5c5;
+    
+        --shadow : 0 7px 14px rgba(48, 48, 65, 0.1), 0 3px 6px rgba(0, 0, 0, 0.212) ;
+    
+    }
+
+}

@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Averta';
+    src: url("../../font/Averta-Regular.eot");
+    src: url("../../font/Averta-Regular.eot?#iefix") format("embedded-opentype"),
+         url("../../font//Averta-Regular.woff") format("woff"),
+         url("../../font/Averta-Regular.ttf") format("truetype");
+    font-weight: normal ;
+    font-style: normal ;
+}
+@font-face {
+    font-family: 'Revalo';
+    src: url("../../font/RevaloModernBold.eot");
+    src: url("../../font/RevaloModernBold.eot?#iefix") format("embedded-opentype"),
+         url("../../font/RevaloModernBold.ttf") format("truetype");
+    font-weight:500;
+    font-style: normal;
+  }
+  
+:root {
+    --color-primary : rgba(21, 144, 226, 0.884) ;
+    --color-secoundary : #ffe603 ;
+
+    --white     : #ffffff ;
+    --bg        : #ffffff ; //#f7f6f6
+    --light     : #f3f3f7;
+    --grey      : #e2dede;
+    --darck     : #1f264d;
+    --grey-darck: #585b6d;
+    --danger    : #e294ae;
+    --succsess  : #83d1aa;
+    --worning   : #f5e275;
+
+    --border-primary   : #e4eaec; 
+    --border-secoundary: ;
+
+    --text-darck : #606177;
+    --text-gray  : #8f94a1;
+
+    --shadow : 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08) ;
+
+}

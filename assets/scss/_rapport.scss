@@ -1,0 +1,53 @@
+.body-primary {
+    margin: calc($m-primary + 15px) ;
+    border : 2px solid $grey ;
+    border-radius: $radius-primary;
+    padding : 30px ;
+    @include grid(1) ;
+}
+.rapport-header {
+    .img-header-rapport {
+        height : 190px ;
+        padding: 10px ;
+    }
+    .text-header-rapport {
+        font-size: 40px ;
+        letter-spacing: 4px;
+        font-weight: 800 ;
+    }
+}
+.hero-rapport {
+    margin-top: 40px ;
+    position: relative;
+    height: 380px ;
+    background-color: $color-primary ;
+    border-radius: $radius-primary ;
+    overflow: hidden;
+    .img-hero {
+        width:95% ; 
+        border-radius: $radius-primary ;
+    }
+}
+.header-container-rappoer {
+    @include flex(space-between, start, 0) ;
+}
+.body-container-rapport {
+    margin-top: 80px ;
+}
+.box-rapport {
+    .title-text {
+        font-size: 29px ;
+        color : $color-secoundary ;
+        text-transform: uppercase;
+    }
+    .text-secoundary {
+        font-size: 21px !important;
+        color : $text-darck  !important ;
+    }
+}
+.body-box {
+    text-align: center ;
+}
+.footer-container-rapport {
+    margin-top: 90px ;
+}

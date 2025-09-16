@@ -1,0 +1,284 @@
+.header-primary {
+    position: relative ;
+    // top : 0px ;
+    z-index: 100 !important;
+}
+// =================headertop==================
+.header-top {
+    text-align: center;
+    background-color: $darck ;
+    z-index: 9;
+    .container {
+        padding : 6px 0;
+        @include flex(space-between, center, 0) ;
+        margin: 0 $m-container ;
+        .route-pages {
+            a {
+                font-size: $size-secoundary ;
+                color : $text-light ;
+                &:hover {
+                    color: $color-primary ;
+                }
+            }
+        }
+    }
+
+    .languages-header {
+        position: relative;
+        background-color: $grey-darck ;
+        @include flex(start, center, 0) ;
+        cursor: pointer;
+        padding : 2px ;
+        border-radius: $radius-secoundary ;
+        .img-icon {
+            width : 22px ;
+            height : 22px ;
+            border-radius: $radius-x ;
+        }
+        .name-language {
+            margin: 0 8px ;
+            font-size: $size-secoundary !important;
+            color: $text-light ;
+        }
+        &:hover {
+            .dropdown-primary{
+                display: block ;
+            }
+        }
+    }
+
+    .bx-profile {
+        gap : 10px !important ;
+        .img-profile {
+            width : 28px ;
+            height : 28px ;
+            border-radius: $radius-x ;
+            cursor: pointer;
+        }
+    }
+}
+.item-language {
+    @include transition() ;
+    padding: $p-secoundary ;
+    border-radius: $radius-primary ;
+    cursor: pointer ;
+    .flex-auto {gap : 8px !important;}
+    &:hover {
+        background-color: $light ;
+    }
+    .check {
+        .cheched {
+            width : 10px ;
+            height : 10px ;
+            border-radius: $radius-x ;
+            box-shadow: $shadow-primary ;
+            background-color: $succsess ;
+            display: none ;
+        }
+    }
+    input {
+        &:checked + .cheched {
+            display: block ;
+        }
+    }
+}
+.dropdown-primary {
+    @include transition() ;
+    position: absolute ;
+    top : 40px ;
+    right : 0 ;
+    padding : calc($p-primary /2) ;
+    border-radius: $radius-primary ;
+    box-shadow:  $shadow-primary ;
+    width : 280px ;
+    z-index: 100 ;
+    background-color: $white ;
+    display: none ;
+    &::after {
+        content: "" ;
+        position: absolute;
+        right : 7px ;
+        top: -20px ;
+        border : 12px solid ;
+        border-color: transparent transparent $white transparent ;
+    }
+
+    .header-dropdown {
+        padding: $p-primary ;
+        text-align: center ;
+    }
+    .footer-dropdown {
+        @include grid(2) ;
+        gap : $p-secoundary ;
+        padding: $p-secoundary ;
+    }
+}
+.drop-user {
+    display: block ;
+}
+// =================header top==================
+// =================header min==================
+.header-min {
+    // border-bottom: 1px solid $border-primary ;
+    background-color: $white ;
+    .container {
+        padding : calc($p-secoundary - 4px) 0;
+        @include flex(space-between, center, 0) ;
+        margin: 0 $m-container ;
+    }
+    .box-first-header {
+        @include flex(space-between, center, $m-primary) ;
+    }
+    .box-secound-header {
+        @include flex(space-between, center, 3px) ;
+        .card-header {
+            @include flex(start, center, 7px) ;
+            cursor: pointer;
+            position: relative ;
+            .icon-card {
+                font-size: calc($size-primary + 2px) ;
+                color: $text-grey ;
+            }
+            &::after {
+                content: attr(card);
+                position: absolute ;
+                width : max-content ;
+                padding:2px 4px 0 4px;
+                height : 18px ;
+                @include flex(center, center, 0px) ;
+                background-color: $color-secoundary ;
+                color: $white ;
+                font-size: $size-secoundary ;
+                border-radius: $radius-x ;
+                top : -10px ;
+                right : -10px ;
+
+            }
+        }
+    }
+    .box-search-header {
+        @include flex(space-between, center, 3px) ;
+        border : 1px solid $border-primary ;
+        height: $box-p ;
+        border-radius: $radius-secoundary ;
+        padding: 0 $p-primary ;
+        width: 50% ;
+        .input-search {
+            background-color: transparent ;
+            border: 0 ;
+            outline: 0 ;
+            padding: $p-primary 0 ;
+            width: 100% ;
+            font-size: $size-secoundary ;
+        }
+        .icon-search {
+            cursor: pointer;
+            @include flex(center, center, 0) ;
+            font-size: calc($size-primary + 1px) ;
+            color: $text-grey ;
+            background-color: transparent ;
+        }
+    }
+}
+.logo-primary {
+    cursor: pointer;
+    // width: calc($nav-w  - $m-primary);
+    .logo-name {
+        font-size: 33px ;
+        color : $color-primary ;
+        font-weight: 800 ;
+        span {
+            color : $color-secoundary;
+        }
+    }
+}
+// =================header min==================
+// =================header bottom==================
+.header-bottom {
+    background-color: $color-primary ;
+    .container {
+        padding : $p-secoundary 0;
+        @include flex(space-between, center, 0) ;
+        margin: 0 $m-container ;
+    }
+    .route-pages {
+        @include flex(start, center, $m-primary) ;
+        .item-route-page {
+            position: relative;
+            @include flex(center, center, 6px) ;
+            height : $box ;
+            padding : $p-primary 0;
+            font-size: $size-primary;
+            color : $text-light ;
+            @include transition() ;
+            border-radius: $radius-primary ;
+            &:hover , &.active{
+                color: $color-secoundary ;
+                &::after {
+                    left: 0 ;
+                    width: 100% ;
+                }
+            }
+            &::after {
+                @include transition() ;
+                content : "" ;
+                position: absolute ;
+                height : 3px ;
+                width : 0 ;
+                bottom : -1px ;
+                left: 50% ;
+                background-color: $color-secoundary ;
+                border-radius: $radius-primary;
+            }
+        }
+    }
+}
+// =================header bottom==================
+.action-primary {
+    position: fixed ;
+    right : $m-primary ;
+    bottom : $m-primary ;
+    display: none ;
+}
+
+
+.item-primary {
+    @include transition() ;
+    padding: $p-secoundary ;
+    border-radius: $radius-primary ;
+    .info {
+        gap : $p-secoundary ;
+    }
+    &:hover {
+        background-color: $light ;
+    }
+}
+
+
+
+
+
+
+.switch-primary {
+    width : 53px ;
+    height : 28px ;
+    position: relative;
+    background-color: $light ;
+    border-radius: $radius-secoundary ;
+    cursor: pointer;
+    input{ 
+        display: none ;
+        &:checked + .check{
+            left : 25px ;
+            background-color: $color-primary ;
+        }
+    }
+    .check {
+        @include transition() ;
+        position: absolute ;
+        width : 24px ; height : 24px ;
+        top : 2px ; left : 2px ;
+        background-color: $white ;
+        border-radius: $radius-x ;
+    }
+}

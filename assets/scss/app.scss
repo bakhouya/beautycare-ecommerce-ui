@@ -1,0 +1,59 @@
+@import 'master/theme-default' ,'master/var' , 'master/function','master/dark', 'master/class' ;
+@import 'leyout/header', 'leyout/content', 'rapport';
+
+.link-btn {
+    height: $box-p ;
+    border-radius: $radius-primary ;
+    background-color: $light ;
+}
+.btn-cart {
+    @include flex(center, center, 7px) ;
+    @include transition() ;
+    height: $box ;
+    font-size: $size-secoundary ;
+    border-radius: $radius-secoundary ;
+    padding: 0 $m-primary ;
+    text-transform: capitalize ;
+    cursor: pointer;
+    color : $text-light ;
+    background-color: $color-primary ;
+    &:hover {
+        background-color: $color-secoundary ;
+    }
+}
+.btn{
+    @include flex(center, center, 7px) ;
+    @include transition() ;
+    height: $box-p ;
+    font-size: $size-secoundary ;
+    border-radius: $radius-secoundary ;
+    padding: 0 $m-primary ;
+    text-transform: capitalize ;
+    cursor: pointer;
+    &.btn-primary {
+        background-color: $color-primary ;
+        color : $text-light ;
+        &:hover {
+            background-color: $color-secoundary ;
+            box-shadow: $shadow-primary ;
+        }
+    }
+    &.btn-secoundary {
+        background-color: $light ;
+        color : $text-grey ;
+        &:hover {
+            box-shadow: $shadow-primary ;
+        }
+    }
+}
+.btn-icon {
+    width : $box-p ;
+    height : $box-p ;
+    border : none ;
+    outline: none ;
+    border-radius: $radius-x ;
+    @include flex(center, center, 0) ;
+    background-color: $white ;
+    box-shadow: $shadow-primary ;
+    cursor: pointer;
+}

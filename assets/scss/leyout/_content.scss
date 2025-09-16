@@ -1,0 +1,247 @@
+.min-content {
+    // @include flex(space-between, start, $m-primary) ;
+    padding: $m-primary $m-container ;
+    position: relative ;
+    z-index: 2 ;
+    .content-primary {
+        // width: calc(100% - $nav-w) ;
+        position: relative;
+    }
+}
+.sidbar-primary {
+    position: sticky ;
+    top : calc(100px + $m-primary) ;
+    width: $nav-w ;
+    background-color: $white ;
+    border-radius: $radius-primary ;
+    @include border() ;
+    display: none ;
+    .header-sidbar {
+        padding: $p-primary ;
+    }
+    .body-sidbar {
+        padding: $p-secoundary ;
+        .item-sidbar {
+            @include transition() ;
+            border-radius: $radius-primary ;
+            padding: $p-secoundary ;
+            cursor: pointer ;
+            .link {
+                gap : $p-secoundary !important;
+                color : $text-darck ;
+            }
+            &:hover {
+                background-color: $light ;
+                padding: $p-secoundary $p-primary;
+            }
+        }
+    }
+    .footer-sidbar {
+        padding: $p-primary ;
+    }
+}
+.hero-primary {
+    position: relative ;
+    width: calc(100%);
+    .item-hero-slide {
+        position: relative !important ;
+        img {
+            height : 370px ;
+            width : 100% ;
+            border-radius: $radius-primary ;
+        }
+    }
+    
+    .content-hero-primary {
+        display: grid ;
+        gap : $p-primary ;
+        width: 50% ;
+        position: absolute ;
+        top : 50%  ;
+        left : 50px ;
+        transform: translateY(-50%);
+        .btn {
+            width: max-content ;
+        }
+    }
+}
+
+.wrapper-collection-primary {
+    padding-block-start: 0 ; 
+    margin-top: $m-primary ;
+    @include grid(8) ;
+    gap: $m-primary ;
+    .item-collection {
+        position: relative ;
+        cursor: pointer ;
+        overflow: hidden ;
+        .header-item-collection {
+            position: relative ;
+            overflow: hidden ;
+            height : 130px ;
+            width : 100% ;
+            border-radius: $radius-x ;
+            margin: auto ;
+            img {
+                width : 100% ;
+                height : 100% ;
+                @include transition() ;
+            }
+        }
+        .body-item-collection {
+            text-align: center ;
+            margin-top: 15px ;
+            .text-secoundary {color : $text-darck ;}
+        }
+        &:hover {
+            img{
+                transform: scale(1.09) rotate(1deg);
+            }
+        }
+    }
+}
+
+.title-section-primary {
+    margin-bottom: $p-primary ;
+}
+.wrapper-offers-primary{
+    margin-top: $m-primary ;
+    position: relative;
+    .owl-dots {
+        display: none ;
+    }
+    .owl-nav {
+        display: none ;
+        button {
+            @include flex(center, center, 0) ;
+            @include transition() ;
+            position: absolute ;
+            top : 50% ;
+            transform: translateY(-50%);
+            width : $box-p ;
+            height : $box-p ;
+            background-color: $white !important ;
+            border-radius: $radius-x  !important ;
+            // display : none  !important;
+            cursor: pointer ;
+        }
+        .owl-prev {
+            left : $m-primary ;
+        }
+        .owl-next {
+            right : $m-primary ;
+        }
+    }
+}
+.card-primary {
+    cursor: pointer ;
+    border-radius: $radius-primary ;
+    background-color: $white ;
+    // padding: $p-secoundary ;
+    // @include border() ;
+    .header-card-primary{
+        position: relative ;
+        border-radius: calc($radius-primary) ;
+        overflow: hidden ;
+        height: 250px ;
+        .img-card {
+            height: 100% ;
+            @include transition() ;
+            border-image : fill 0 linear-gradient(#0001, #0000) ;
+        }
+        &::after {
+            @include filter() ;
+        }
+    }
+    .body-card-primary {
+        margin-top: $p-secoundary ;
+        text-align: center ;
+        .text-primary {
+            font-size: $size-secoundary ;
+        }
+        .price-primary {
+            @include flex(center, center, 7px) ;
+            margin: 6px 0 ;
+            .price-normal {
+                color : $grey ;
+                text-decoration: line-through ;
+            }
+            .price-descouvre {
+                color : $color-primary ;
+                font-size: $size-primary !important;
+            }
+        }
+        .reviews {
+            @include flex(center, center, 7px) ;
+        }
+    }
+    .footer-card-primary {
+        @include flex(center, center, $p-primary) ;
+        @include transition() ;
+        position: absolute ;
+        top : -60px ;
+        left : 0 ;
+        width : 100% ;
+    }
+    .add-to-cart {
+        @include grid(1) ;
+        padding: 6px $p-secoundary ;
+        display: none ;
+    }
+    &:hover {
+        .img-card {
+            transform: scale(1.2) rotate(10deg);
+        }
+        .footer-card-primary {
+            top : $p-primary ;
+        }
+        .text-primary {
+            color : $color-primary ;
+        }
+    }
+
+}
+
+
+.footer-primary {
+    background-color: $light ;
+    .container{
+        @include grid(4) ;
+        padding: $m-primary $m-container;
+        .item-in-box-footer {
+            display: block ;
+            padding: $p-secoundary ;
+            a{
+                color : $color-primary ;
+            }
+        }
+        .social-media {
+            @include transition() ;
+            display: inline-block ;
+            margin: $p-secoundary ;
+            &:hover {
+                transform: rotate(180deg);
+            }
+        }
+    } 
+    .footer-footer {
+        padding: $p-secoundary $m-container ;
+        background-color: $darck ;
+        @include flex(space-between, center, 0) ;
+    }
+    .box-sub-email {
+        @include flex(space-between, center, 0) ;
+        background-color: $white ;
+        border-radius: $radius-secoundary ;
+        padding: 4px ;
+        position: relative;
+        margin-top: $p-primary ;
+        input {
+            height : 100% ;
+            border: 0 ;
+            outline: 0 ;
+            padding: $p-primary ;
+            background-color: transparent ;
+        }
+    }
+}

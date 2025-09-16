@@ -1,0 +1,27 @@
+@mixin flex($j, $a, $gap){
+    display: flex ;
+    justify-content: $j ;
+    align-items: $a ;
+    gap : $gap ;
+}
+@mixin grid($grid){
+    display: grid ;
+    grid-template-columns: repeat($grid, 1fr) ;
+    gap: $m-primary ;
+}
+@mixin transition(){
+    transition: all 0.5s ease-in-out ;
+}
+@mixin border(){
+    border : 1px solid $border-primary !important;
+}
+@mixin filter(){
+    content : "" ;
+    position: absolute ;
+    top : 0 ;
+    left : 0 ;
+    height : 100% ;
+    width : 100% ;
+    background : -webkit-gradient(45deg, rgba(0, 0, 0, 0.699), #000000f3) ;
+    z-index: 2 ;
+}
